@@ -1,5 +1,6 @@
 let dice = 0
 input.onButtonPressed(Button.A, function () {
+    music.play(music.createSoundExpression(WaveShape.Noise, 3423, 1698, 103, 60, 666, SoundExpressionEffect.None, InterpolationCurve.Linear), music.PlaybackMode.UntilDone)
     // Displays the current temperature on the LED grid :D
     basic.showNumber(input.temperature())
     basic.showString("*C")
@@ -38,6 +39,7 @@ input.onButtonPressed(Button.A, function () {
 })
 // old code from testing
 input.onButtonPressed(Button.AB, function () {
+    music.play(music.createSoundExpression(WaveShape.Noise, 3423, 1698, 103, 60, 666, SoundExpressionEffect.None, InterpolationCurve.Linear), music.PlaybackMode.UntilDone)
     for (let index = 0; index < 9; index++) {
         basic.showLeds(`
             . . # . .
@@ -72,7 +74,7 @@ input.onButtonPressed(Button.AB, function () {
 })
 // compass
 input.onButtonPressed(Button.B, function () {
-    // Displays the current temperature on the LED grid :D
+    music.play(music.createSoundExpression(WaveShape.Noise, 3423, 1698, 103, 60, 666, SoundExpressionEffect.None, InterpolationCurve.Linear), music.PlaybackMode.UntilDone)
     basic.showNumber(input.compassHeading())
     basic.pause(100)
     for (let index = 0; index < 2; index++) {
@@ -126,7 +128,8 @@ input.onGesture(Gesture.Shake, function () {
     basic.clearScreen()
 })
 input.onGesture(Gesture.LogoDown, function () {
-    for (let index = 0; index < 2; index++) {
+    music.play(music.createSoundExpression(WaveShape.Noise, 3423, 1698, 103, 60, 666, SoundExpressionEffect.None, InterpolationCurve.Linear), music.PlaybackMode.UntilDone)
+    for (let index = 0; index < 5; index++) {
         basic.showLeds(`
             . . . . #
             . . . # .
