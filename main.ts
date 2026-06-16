@@ -125,10 +125,36 @@ input.onGesture(Gesture.Shake, function () {
     basic.pause(2000)
     basic.clearScreen()
 })
-basic.forever(function () {
-	
-})
-// ignore
-basic.forever(function () {
-	
+input.onGesture(Gesture.LogoDown, function () {
+    for (let index = 0; index < 2; index++) {
+        basic.showLeds(`
+            . . . . #
+            . . . # .
+            . . # # .
+            . # # . .
+            # # # # .
+            `)
+        basic.showLeds(`
+            . . # . .
+            . . # . .
+            . . # . .
+            . # # # .
+            # # # # #
+            `)
+        basic.showLeds(`
+            # . . . .
+            . # . . .
+            . # # . .
+            . . # # .
+            . # # # #
+            `)
+        basic.showLeds(`
+            . . # . .
+            . . # . .
+            . . # . .
+            . # # # .
+            # # # # #
+            `)
+    }
+    basic.clearScreen()
 })
