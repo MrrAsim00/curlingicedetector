@@ -70,6 +70,43 @@ input.onButtonPressed(Button.AB, function () {
         basic.clearScreen()
     }
 })
+// compass
+input.onButtonPressed(Button.B, function () {
+    // Displays the current temperature on the LED grid :D
+    basic.showNumber(input.compassHeading())
+    basic.pause(100)
+    for (let index = 0; index < 2; index++) {
+        basic.showLeds(`
+            . . . . #
+            . . . # .
+            . . # # .
+            . # # . .
+            # # # # .
+            `)
+        basic.showLeds(`
+            . . # . .
+            . . # . .
+            . . # . .
+            . # # # .
+            # # # # #
+            `)
+        basic.showLeds(`
+            # . . . .
+            . # . . .
+            . # # . .
+            . . # # .
+            . # # # #
+            `)
+        basic.showLeds(`
+            . . # . .
+            . . # . .
+            . . # . .
+            . # # # .
+            # # # # #
+            `)
+    }
+    basic.clearScreen()
+})
 input.onGesture(Gesture.Shake, function () {
     dice = randint(1, 6)
     if (dice == 1) {
