@@ -1,11 +1,11 @@
 let dice = 0
 input.onButtonPressed(Button.A, function () {
-    music.play(music.createSoundExpression(WaveShape.Noise, 5000, 1, 183, 0, 366, SoundExpressionEffect.None, InterpolationCurve.Logarithmic), music.PlaybackMode.InBackground)
     // Displays the current temperature on the LED grid :D
     basic.showNumber(input.temperature())
     basic.showString("*C")
     basic.pause(100)
     for (let index = 0; index < 2; index++) {
+        music.play(music.createSoundExpression(WaveShape.Noise, 5000, 1, 183, 0, 366, SoundExpressionEffect.None, InterpolationCurve.Logarithmic), music.PlaybackMode.InBackground)
         basic.showLeds(`
             . . . . #
             . . . # .
@@ -39,8 +39,8 @@ input.onButtonPressed(Button.A, function () {
 })
 // old code from testing
 input.onButtonPressed(Button.AB, function () {
-    music.play(music.createSoundExpression(WaveShape.Noise, 5000, 1, 183, 0, 366, SoundExpressionEffect.None, InterpolationCurve.Logarithmic), music.PlaybackMode.InBackground)
     for (let index = 0; index < 9; index++) {
+        music.play(music.createSoundExpression(WaveShape.Noise, 5000, 1, 183, 0, 366, SoundExpressionEffect.None, InterpolationCurve.Logarithmic), music.PlaybackMode.InBackground)
         basic.showLeds(`
             . . # . .
             . . # . .
@@ -74,10 +74,10 @@ input.onButtonPressed(Button.AB, function () {
 })
 // compass
 input.onButtonPressed(Button.B, function () {
-    music.play(music.createSoundExpression(WaveShape.Noise, 5000, 1, 183, 0, 366, SoundExpressionEffect.None, InterpolationCurve.Logarithmic), music.PlaybackMode.InBackground)
     basic.showNumber(input.compassHeading())
     basic.pause(100)
     for (let index = 0; index < 2; index++) {
+        music.play(music.createSoundExpression(WaveShape.Noise, 5000, 1, 183, 0, 366, SoundExpressionEffect.None, InterpolationCurve.Logarithmic), music.PlaybackMode.InBackground)
         basic.showLeds(`
             . . . . #
             . . . # .
@@ -129,8 +129,8 @@ input.onGesture(Gesture.Shake, function () {
     basic.clearScreen()
 })
 input.onGesture(Gesture.LogoDown, function () {
-    music.play(music.createSoundExpression(WaveShape.Noise, 5000, 1, 183, 0, 366, SoundExpressionEffect.None, InterpolationCurve.Logarithmic), music.PlaybackMode.InBackground)
     for (let index = 0; index < 2; index++) {
+        music.play(music.createSoundExpression(WaveShape.Noise, 5000, 1, 183, 0, 366, SoundExpressionEffect.None, InterpolationCurve.Logarithmic), music.PlaybackMode.InBackground)
         basic.showLeds(`
             . . . . #
             . . . # .
